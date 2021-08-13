@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <div id="background" class="col col-12 text-center">
+    <div class="text-center" id="text">
+      <span>
+        <span class="fontstyle"><b>Order </b></span>
+        <span class="fonts">Food Online From </span>
+        <h5>
+          <span class="fontstyle">Best Restaurants</span>
+        </h5>
+      </span>
+    </div>
+    <div class="search float-center">
+      <form class="form-inline col-12" action="/search">
+        <div class="mb-2 col-12 col-md-5">
+          <div class="form-group has-search">
+            <span
+              class="fa fa-search form-control-feedback"
+              style="cursor: pointer"
+            ></span>
+            <input
+              type="text"
+              class="form-control"
+              #searched
+              placeholder="Search"
+            />
+          </div>
+        </div>
+        <div class="mx-sm-3 mb-2 col-12 col-md-5">
+          <div class="form-group has-search">
+            <span class="fa fa-caret-down form-control-feedback"></span>
+            <input type="text" class="form-control" placeholder="City" />
+          </div>
+        </div>
+        <a
+          type="button"
+          class="btn btn-warning mb-2"
+          [href]="['/search/' + searched.value]"
+          value="search"
+          (click)="search()"
+        >
+          Search
+        </a>
+      </form>
+    </div>
+  </div>
+</div>

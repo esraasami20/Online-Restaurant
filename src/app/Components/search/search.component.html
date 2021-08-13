@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-4" *ngFor="let item of RestaurantList">
+      <div class="m-1 bg-light col-md-12 d-flex align-items-center wrap">
+        <div class="rounded-circle circletag">
+          <img
+            src="http://localhost:54866/{{ item.restaurantImg }}"
+            class="img-fluid circletag img-circle"
+          />
+        </div>
+        <div class="col-6">
+          <span>{{ item.restaurant_Name }}</span>
+        </div>
+        <div>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

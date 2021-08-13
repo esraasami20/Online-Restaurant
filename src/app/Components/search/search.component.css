@@ -1,0 +1,36 @@
+body {
+  background-color: gray;
+}
+.img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.circletag {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: #e6e7ed;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+h5 {
+  color: blue;
+}
+h4 {
+  color: gray;
+}
+.wrap {
+  border-radius: 20px;
+}
+span {
+  cursor: pointer;
+}
+
+.progress-bar {
+  width: 50%;
+}

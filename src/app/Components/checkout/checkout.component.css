@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+
+.eee {
+  margin-left: 80%;
+}
+@media (max-width: 800px) {
+  .eee {
+    margin-left: 100px;
+  }
+  /* CSS that should be displayed if width is equal to or less than 800px goes here */
+}
+.reservenow {
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: "Pattaya", sans-serif;
+  color: #16160f;
+  font-size: 1.5em;
+}

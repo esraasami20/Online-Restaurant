@@ -1,0 +1,88 @@
+:root{
+    --primaryColor:#f09d51;
+    --mainWhite:#fff;
+    --mainblack:#222;
+    --mainGrey:#ececec;
+    --mainSpacing:0.1rem;
+    --mainTransition:all 0.3s linear;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: var(--mainblack);
+    background:var(--mainWhite);
+    font-family: "Lato" ,sans-serif;
+}
+.products-center{
+    width: 95vw;
+    margin: 0 auto;
+    max-width: 1200;
+    display: grid;
+    margin-top: 50px;
+    /* grid-template-columns: repeat(4,1fr); */
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
+    
+}
+.img-container{
+  position: relative;
+  overflow: hidden;  
+  height: 200px;
+}
+.bag-btn{
+    position: absolute;
+    top:70%;
+    right: 0;
+    background: var(--primaryColor);
+    border: none;
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    letter-spacing: var(--mainSpacing);
+    font-weight: bold;
+    transition: var(--mainTransition);
+    transform: translateX(101%);
+    cursor: pointer;
+}  
+.bag-btn:hover{
+    color: var(--mainWhite);
+    color: #631704;
+}
+.fa-shopping-cart{
+    margin-right: 0.5rem;
+}
+.img-container:hover .bag-btn{
+    transform: translateX(0);
+}
+.product-img{
+    display: block;
+    width: 100%;
+    min-height: 10rem;
+    transition: var(--mainTransition);
+}
+.img-container:hover .product-img{
+    opacity: 0.5;
+}
+.product h3{
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
+}
+.product h4{
+    margin-top: 0.7rem;
+    letter-spacing: var(--mainSpacing);
+    color: var(--primaryColor);
+    text-align: center;
+}
+#p{
+     color: white;
+  font-family: "Pattaya", sans-serif;
+  color: #e97051;
+  font-size: 1.5em;
+  cursor: pointer;
+}

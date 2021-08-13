@@ -1,0 +1,28 @@
+<div class="products-center">
+  <article class="product" *ngFor="let item of RestaurantList">
+    <div class="img-container">
+      <a href="#" style="text-decoration: none">
+        <img
+          src="http://localhost:54866/{{ item.restaurantImg }}"
+          alt="product"
+          class="product-img"
+        />
+      </a>
+      <button
+        class="bag-btn"
+        data-id="1"
+        (click)="NavigateToMenuComponent(item)"
+      >
+        <i class="fas fa-edit"></i>
+        Show Menu
+      </button>
+    </div>
+    <p id="p">{{ item.restaurant_Name }}</p>
+    <p>
+      <a href="#" style="text-decoration: none; color: black">
+        {{ item.description }}
+      </a>
+    </p>
+    <!-- <h6><a href="#" style="font-display: none;">Menu <i class="far fa-angle-double-right"></i></a></h6> -->
+  </article>
+</div>

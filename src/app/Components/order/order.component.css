@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+
+:root {
+  --primaryColor: #f09d51;
+  --mainWhite: #fff;
+  --mainblack: #222;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: var(--mainblack);
+  background: var(--mainWhite);
+  font-family: "Lato", sans-serif;
+}
+.products-center {
+  width: 90%;
+  /* width: 20vw; */
+  margin: 0 auto;
+  max-width: 1200;
+  display: grid;
+  margin-top: 50px;
+  /* grid-template-columns: repeat(4,1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+}
+.img-container {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+.bag-btn {
+  position: absolute;
+  top: 70%;
+  right: 0;
+  background: var(--primaryColor);
+  border: none;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  letter-spacing: var(--mainSpacing);
+  font-weight: bold;
+  transition: var(--mainTransition);
+  transform: translateX(101%);
+  cursor: pointer;
+}
+.bag-btn:hover {
+  color: var(--mainWhite);
+}
+.fa-shopping-cart {
+  margin-right: 0.5rem;
+}
+.img-container:hover .bag-btn {
+  transform: translateX(0);
+}
+.product-img {
+  display: block;
+  width: 100%;
+  min-height: 5rem;
+  transition: var(--mainTransition);
+}
+.img-container:hover .product-img {
+  opacity: 0.5;
+}
+.product h3 {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+}
+.product h4 {
+  margin-top: 0.7rem;
+  letter-spacing: var(--mainSpacing);
+  color: var(--primaryColor);
+  text-align: center;
+}
+
+.reservenow {
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: "Pattaya", sans-serif;
+  color: #16160f;
+  font-size: 1.5em;
+}
+
+.main {
+  width: 50%;
+  margin: 50px auto;
+}
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+/* .ccc{
+    width: 100px;
+    margin-left: 15%;
+} */
+.kk {
+  margin-left: 10px;
+}
+@media (max-width: 800px) {
+  .kk {
+    margin-left: 10px;
+  }
+  /* CSS that should be displayed if width is equal to or less than 800px goes here */
+}
+#formcontainer {
+  margin: auto;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  margin-left: 15%;
+}
