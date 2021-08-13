@@ -24,13 +24,13 @@ const routes: Routes = [
     component: CheckoutComponent,
   },
   {
-    path: 'search/:searched',
+    path: 'search/:searched/:selectedCity',
     component:SearchComponent,
   },
-  // {
-  //   path: '**',
-  //   component: RestaurantsComponent,
-  // },
+  {
+    path: '**',
+    component: RestaurantsComponent,
+  },
 ];
 
 @NgModule({

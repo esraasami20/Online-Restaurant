@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,9 +11,7 @@ import { MenuComponent } from './Components/menu/menu.component';
 import { OrderComponent } from './Components/order/order.component';
 import { CheckoutComponent } from './Components/checkout/checkout.component';
 import { SearchComponent } from './Components/search/search.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
+// import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,8 +27,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    NgModule,
+    // FormsModule,
+    // NgModule,
+    // RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

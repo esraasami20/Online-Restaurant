@@ -4,23 +4,23 @@
 
     <div class="card">
       <div class="card-header d-flex">
-        <div>
+        <div class="mx-1">
           <span>
             <span class="fas fa-user mx-2"></span>
-            <label style="height: 35px"> User Name</label>
+            <label style="height: 35px"> {{customer_Name}}</label>
           </span>
         </div>
-        <div>
+        <div class="mx-1">
           <span class="fas fa-phone mx-2"></span>
-          <label style="height: 35px"> Phone</label>
+          <label style="height: 35px"> {{customer_Phone}}</label>
         </div>
-        <div>
+        <div class="mx-1">
           <span class="fas fa-envelope mx-2"></span>
-          <label style="height: 35px"> Email</label>
+          <label style="height: 35px"> {{customer_Email}}</label>
         </div>
-        <div>
+        <div class="mx-1">
           <span class="fas fa-map-marker-alt mx-2"></span>
-          <label style="height: 35px"> Address</label>
+          <label style="height: 35px"> {{customer_Address}}</label>
         </div>
       </div>
       <div class="card-body">
@@ -36,26 +36,26 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr *ngFor="let i of orders">
               <td>
                 <img
-                  src="../../../assets/Images/5.jpg"
+                  src="http://localhost:54866/{{ i.img }}"
                   alt="product"
                   class="rounded-circle"
                   width="50px"
                   height="50px"
                 />
               </td>
-              <td class="pt-4">Menu Name</td>
-              <td class="pt-4">$ 30.5</td>
+              <td class="pt-4">{{i.menu_Title }}</td>
+              <td class="pt-4">$ {{i.price}}</td>
               <td class="pt-4">
                 <div class="d-flex">
-                  <span class="fas fa-plus pt-2"></span>
-                  <label class="btn btn-default px-2"> 1 </label>
-                  <span class="fas fa-minus pt-2"></span>
+                  <span class="fas fa-plus pt-2"  style="cursor: pointer;" (click)="increase(i)"></span>
+                  <label class="btn btn-default px-2"> {{counter}} </label>
+                  <span class="fas fa-minus pt-2" style="cursor: pointer;" (click)="decrease(i)"></span>
                 </div>
               </td>
-              <td class="pt-4">$ 30.5</td>
+              <td class="pt-4">$ {{counter*i.price}}</td>
               <td class="pt-4">
                 <i class="fas fa-times"></i>
               </td>
@@ -68,18 +68,18 @@
           <h5 class="mb-2"><b>Total</b></h5>
           <p>
             SubTotal
-            <span style="margin-left: 90%">$30.5</span>
+            <span style="margin-left: 90%" *ngFor="let i of orders"> $ {{counter * i.price}}</span>
           </p>
           <hr />
           <p>
             <b>Total</b>
-            <span style="margin-left: 90%">$30.5</span>
+            <span style="margin-left: 90%">$ 4600</span>
           </p>
         </div>
         <hr />
         <div class="">
           <a class="btn btn-warning my-1 mx-5" [routerLink]="['']">Back</a>
-          <a class="btn btn-warning my-1 eee">Confirm</a>
+          <button class="btn btn-warning my-1 eee" (click)="confirm()">Confirm</button>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container my-5">
   <div class="row">
     <div class="col-12 col-md-4" *ngFor="let item of RestaurantList">
       <div class="m-1 bg-light col-md-12 d-flex align-items-center wrap">
@@ -8,13 +8,14 @@
             class="img-fluid circletag img-circle"
           />
         </div>
-        <div class="col-6">
-          <span>{{ item.restaurant_Name }}</span>
-        </div>
-        <div>
+        <div class="col-8">
+          <h4>{{ item.restaurant_Name }}</h4>
           <p>{{ item.description }}</p>
+
         </div>
+        
       </div>
     </div>
   </div>
+  <button class="btn btn-warning" (click)="back()">All Restaurants</button>
 </div>

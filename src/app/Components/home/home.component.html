@@ -10,7 +10,7 @@
       </span>
     </div>
     <div class="search float-center">
-      <form class="form-inline col-12" action="/search">
+      <form class="form-inline col-12" >
         <div class="mb-2 col-12 col-md-5">
           <div class="form-group has-search">
             <span
@@ -28,15 +28,19 @@
         <div class="mx-sm-3 mb-2 col-12 col-md-5">
           <div class="form-group has-search">
             <span class="fa fa-caret-down form-control-feedback"></span>
-            <input type="text" class="form-control" placeholder="City" />
+            <select class="form-control" (change)="selected($event)">
+              <option>Select the City</option>
+              <option  *ngFor="let item of CitiesList" [value]="item.city_Id">{{item.city_Name}}</option>
+            </select>
+            <!-- <input type="text" (click)="search()" class="form-control" placeholder="City" /> -->
           </div>
         </div>
         <a
           type="button"
           class="btn btn-warning mb-2"
-          [href]="['/search/' + searched.value]"
+          [href]="['/search/' + searched.value +'/'+ selectedCity]"
           value="search"
-          (click)="search()"
+          
         >
           Search
         </a>

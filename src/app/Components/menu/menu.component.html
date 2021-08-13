@@ -22,19 +22,21 @@
         <input
           type="checkbox"
           id="ckeckbtn"
-          checked="{{ item.ischecked }}"
           class="mx-2"
+          (change)="getChecks($event,item)"
         />
+
         <a href="#" style="text-decoration: none; color: black">{{
           item.menu_Title
         }}</a>
       </h3>
+
       <p>{{ item.description }}</p>
       <h4 style="cursor: pointer; color: chocolate">$ {{ item.price }}</h4>
     </article>
   </div>
   <div>
-    <a class="btn btn-warning my-1 mx-5" [routerLink]="['']">Back</a>
+    <button class="btn btn-warning my-1 mx-5" (click)="back()">Back</button>
     <a
       class="btn btn-warning my-1 eee"
       (click)="NavigateToOrderComponent(restaurantMenu)"
@@ -42,3 +44,7 @@
     >
   </div>
 </section>
+
+
+
+
