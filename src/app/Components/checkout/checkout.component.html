@@ -57,7 +57,7 @@
               </td>
               <td class="pt-4">$ {{counter*i.price}}</td>
               <td class="pt-4">
-                <i class="fas fa-times"></i>
+                <i class="fas fa-times" (click)="remove(i)" style="cursor: pointer;"></i>
               </td>
             </tr>
           </tbody>
@@ -73,7 +73,7 @@
           <hr />
           <p>
             <b>Total</b>
-            <span style="margin-left: 90%">$ 4600</span>
+            <span style="margin-left: 90%">$ {{totale}}</span>
           </p>
         </div>
         <hr />

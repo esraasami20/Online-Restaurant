@@ -32,11 +32,22 @@ export class CheckoutComponent implements OnInit {
   increase(i:any){
     this.counter++;
   }
+
+  remove(btnName:any){
+     this.orders.splice(btnName, 1); 
+  }
   confirm() {
     alert('^_^ your Order will arrive soon ^_^');
     this.router.navigate(['/'])
   }
+  totale:number=0;
   ngOnInit(): void {
     this.orders = JSON.parse(localStorage.getItem('orders') || '{}');
+    for(var i=0;i<this.orders.length;i++){
+      this.totale = this.orders[i].price;
+      this.totale += this.orders[i].price;
+
+      console.log(this.totale);
+    } 
   }
 }

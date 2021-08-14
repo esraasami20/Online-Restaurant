@@ -13,13 +13,13 @@ export class SearchComponent implements OnInit {
   // selectedCity:any;
 
   constructor(
-    private router:Router,
+    private router: Router,
     private ar: ActivatedRoute,
     private restaurantService: RestaurantService
   ) {}
-  back(){
+  back() {
     this.router.navigate(['/']);
-  };
+  }
   ngOnInit(): void {
     let searched: string = '';
     let selectedCity;
